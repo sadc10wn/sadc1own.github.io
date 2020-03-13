@@ -1,0 +1,58 @@
+<head>
+    <style>
+	
+		body{
+			margin-top:30px;
+			}
+			
+			
+        #pButton{
+			
+            height:200px;
+            width: 200px;
+            
+            background-size: 100% 100%;
+            background-position: center;
+			background-image:url("https://image.freepik.com/free-icon/pause-play-button_318-43701.jpg");
+        }
+		
+		a{
+			font-size: 30px;
+			}
+    </style>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min$
+    <link href="css/ripples.min.css" rel="stylesheet">
+    <link href="css/material-wfont.min.css" rel="stylesheet">
+</head>
+<body>
+    <center>
+	<div class="container">
+		
+        <audio id="music">
+            <source src="http://50.22.217.113:14847/;stream" type="audio/mpeg" />
+        </audio>
+        <div id="audioplayer">
+
+            <button id="pButton" class="mdi-av-play-circle-outline" onclick="play()"></button>
+			</div>
+			
+    </div>
+	<center>
+	
+    <script>
+        // variable to store HTML5 audio element
+        var music = document.getElementById('music');
+
+        function play() {
+            if (music.paused) {
+                music.play();
+                pButton.className = "";
+                pButton.className = "mdi-av-pause-circle-outline";
+            } else {
+                music.pause();
+                pButton.className = "";
+                pButton.className = "mdi-av-play-circle-outline";
+            }
+        }
+    </script>
+</body>
